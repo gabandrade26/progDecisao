@@ -6,10 +6,18 @@ crescente.
 a = int(input("Me informe um valor:"))
 b = int(input("Me informe um valor:"))
 c = int(input("Me informe um valor:"))
-if (a < b < c):
-    print(f"Esses são os valores em forma crescente:{a},{b} e {c}")
-elif (b < c < a):
-    print(f"Esses são os valores em forma crescente:{b},{c} e {a}")
-else:
-    print(f"Esses são os valores em forma crescente:{c},{a} e {b}")
+if (a > b):
+    aux = a
+    a = b
+    b = aux
+if (a > c):
+    aux = a
+    a = c
+    c = aux
+if (b > c):
+    aux = b
+    b = c
+    c = aux
+print(f"Essa é a ordem crescente: {a}, {b} e {c}")
+
 
